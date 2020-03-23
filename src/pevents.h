@@ -6,7 +6,10 @@
  */
 
 #pragma once
-
+#ifdef _WIN32
+#include <Windows.h>
+#endif
+#define WFMO
 #if defined(_WIN32) && !defined(CreateEvent)
 #error Must include Windows.h prior to including pevents.h!
 #endif
